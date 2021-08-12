@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*Реализовать функцию с тремя параметрами: function mathOperation(arg1, arg2, operation),
+        где arg1, arg2 – значения аргументов, operation – строка с названием операции. В зависимости от
+        переданного значения операции (использовать switch) выполнить одну из арифметических операций
+        (использовать функции из задания 4) и вернуть полученное значение. */
+
+        'use strict';
+        // функция сложения
+        function summation(a, b) {
+            return a + b;
+        }
+        // функция вычитания
+        function subtraction(a, b) {
+            return a - b;
+        }
+        // функция деления
+        function division(a, b) {
+            return a / b;
+        }
+        // функция умножение
+        function multiplication(a, b) {
+            return a * b;
+        }
+
+
+        // функция калькулятор в зависимости от переданого  знака (+ - / *)
+        function mathOperation(arg1, arg2, operation) {
+            switch (operation) {
+                case "+":
+                    return summation(arg1, arg2);
+                case "-":
+                    return subtraction(arg1, arg2);
+                case "/":
+                    return division(arg1, arg2);
+                case "*":
+                    return multiplication(arg1, arg2);
+                default:
+                    throw new Error(operation + " не предусмотреная операция.");
+            }
+        }
+    </script>
+</body>
+
+</html>
